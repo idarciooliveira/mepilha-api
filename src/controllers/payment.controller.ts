@@ -51,7 +51,8 @@ export class PaymentController {
                 id: transaction.campaignId
             },
             data: {
-                numberOfSupport: { increment: 1 }
+                numberOfSupport: { increment: 1 },
+                amountReceived: { increment: body.amount }
             }
         })
 
