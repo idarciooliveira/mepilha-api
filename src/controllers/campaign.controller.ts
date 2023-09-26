@@ -103,4 +103,13 @@ export class CampaignController {
             }
         })
     }
+
+    @Get('/users/:id')
+    async getByUserId(@Param('id') id: string) {
+        return await this.prismaService.campaign.findMany({
+            where: {
+                userId: id
+            }
+        })
+    }
 }
