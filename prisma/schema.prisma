@@ -45,7 +45,7 @@ model Campaign {
   isDone          Boolean   @default(false)
   createdAt       DateTime? @default(now())
   canceledAt      DateTime?
-  endAt           DateTime?
+  endAt           DateTime
   userId          String
   categoryId      String
 
