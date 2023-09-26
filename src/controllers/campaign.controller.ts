@@ -32,6 +32,7 @@ export class CampaignController {
         }
 
         const campaign = await this.prismaService.campaign.create({
+            // @ts-ignore
             data: {
                 ...body,
                 cover_image: coverFilename,
