@@ -30,7 +30,9 @@ export class PaymentController {
     async totalgained(@Param('id') id: string) {
         const transactions = await this.prismaService.transaction.findMany({
             where: {
-                userId: id
+                campaign: {
+                    userId: id
+                }
             }
         })
 
