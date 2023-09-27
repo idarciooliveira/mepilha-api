@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsEmail, IsUUID } from 'class-validator';
+import { IsNotEmpty, IsUUID } from 'class-validator';
 
 export class CreateCampaign {
     @IsNotEmpty()
@@ -8,7 +8,7 @@ export class CreateCampaign {
     description: string
 
     @IsNotEmpty()
-    goalAmount: number
+    goalAmount: string
 
     @IsUUID()
     categoryId: string

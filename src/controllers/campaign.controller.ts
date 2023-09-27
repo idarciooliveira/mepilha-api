@@ -61,9 +61,7 @@ export class CampaignController {
     async getById(@Param('id') id: string) {
         return await this.prismaService.campaign.findUnique({
             where: {
-                id: id,
-                isApproved: true,
-                isDone: false
+                id: id
             },
             include: {
                 user: {
